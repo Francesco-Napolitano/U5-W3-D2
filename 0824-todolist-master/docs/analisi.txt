@@ -1,0 +1,60 @@
+TodoList con Login e Register
+
+[x]Register :
+- Entity
+
+DTO Request : (POST)
+username
+email
+password
+
+Response : STATUS HTTP
+
+
+[x] Login :
+- Entity
+
+DTO Request : (POST)
+
+username
+password
+
+Response :
+
+DTO Response:
+
+- token
+
+TodoList :
+- Entity
+
+GET :
+DTO Response :
+id
+title
+description
+completed
+
+POST :
+DTO Request :
+title
+description
+
+
+DTO Response:
+id new_task
+
+DELETE :
+Request id
+HTTP STATUS
+
+PATCH :
+
+DTO Request:
+completed
+
+DTO Response:
+id
+title
+description
+completed
