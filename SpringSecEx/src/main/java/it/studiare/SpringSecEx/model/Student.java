@@ -1,4 +1,4 @@
-package it.studiare.SpringSecEx;
+package it.studiare.SpringSecEx.model;
 
 public class Student {
     private int id;
