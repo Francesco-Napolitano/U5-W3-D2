@@ -58,6 +58,7 @@ public class SecurityConfig {
 //        return new InMemoryUserDetailsManager();
 //    }
 
+
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
