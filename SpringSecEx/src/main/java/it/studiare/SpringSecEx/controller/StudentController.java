@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class StudentController {
 
-    private List <Student> students = new ArrayList<>(List.of(new Student(1, "Paolo", 75), new Student(2, "Francesco", 88), new Student(3, "Luca", 77)));
+    private List <Student> students = new ArrayList<>(List.of(new Student(1, "Paolo", 75), new Student(2, "Francesco", 90), new Student(3, "Luca", 77)));
 
     @GetMapping("/students")
     public List<Student> getStudents() {
@@ -24,7 +24,6 @@ public class StudentController {
     @GetMapping("/csrf-token")
     public CsrfToken getCsrfToken(HttpServletRequest request) {
         return (CsrfToken) request.getAttribute("_csrf");
-
     }
 
     @PostMapping("/students")

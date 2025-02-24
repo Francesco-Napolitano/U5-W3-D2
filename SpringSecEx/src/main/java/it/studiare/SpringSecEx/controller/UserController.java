@@ -1,0 +1,19 @@
+package it.studiare.SpringSecEx.controller;
+
+import it.studiare.SpringSecEx.model.Users;
+import it.studiare.SpringSecEx.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+
+    @PostMapping("/register")
+    public Users register(@RequestBody Users user) {
+        return userService.register(user);
+    }
+}
