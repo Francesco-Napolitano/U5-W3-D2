@@ -56,31 +56,30 @@ public class SecurityConfig {
 
 //    @Bean
 //    public UserDetailsService userDetailsService() {
-////        UserDetails user1 = User.withDefaultPasswordEncoder()
-////                .username("user")
-////                .password("password")
-////                .roles("USER")
-////                .build();
-////        UserDetails user2 = User.withDefaultPasswordEncoder()
-////                .username("napoleon")
-////                .password("12345")
-////                .roles("ADMIN")
-////                .build();
-////
-////        return new InMemoryUserDetailsManager(user1, user2);
+
+    /// /        UserDetails user1 = User.withDefaultPasswordEncoder()
+    /// /                .username("user")
+    /// /                .password("password")
+    /// /                .roles("USER")
+    /// /                .build();
+    /// /        UserDetails user2 = User.withDefaultPasswordEncoder()
+    /// /                .username("napoleon")
+    /// /                .password("12345")
+    /// /                .roles("ADMIN")
+    /// /                .build();
+    /// /
+    /// /        return new InMemoryUserDetailsManager(user1, user2);
 //
 //
 //        return new InMemoryUserDetailsManager();
 //    }
-
-
-@Bean
-public AuthenticationProvider authenticationProvider() {
-    DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-    provider.setPasswordEncoder(new BCryptPasswordEncoder(12));
-    provider.setUserDetailsService(userDetailsService);
-    return provider;
-}
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setPasswordEncoder(new BCryptPasswordEncoder(12));
+        provider.setUserDetailsService(userDetailsService);
+        return provider;
+    }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
